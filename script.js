@@ -14,14 +14,24 @@ class Calculator {
         this.a = Number(a);
         this.b = Number(b);
         this.operation = operation;
-        if (this.operation === '+') {
-            this.plus();
-        } else if (this.operation === '-') {
-            this.minus();
-        } else if (this.operation === '*') {
-            this.multiplication();
-        } else if (this.operation === '/') {
-            this.division();
+        switch (this.operation) {
+            case '+':
+                this.plus();
+            case '-':
+                this.minus();
+            case '*':
+                this.multiplication();
+            case '/':
+                this.division();
+                if (this.operation === '+') {
+                    this.plus();
+                } else if (this.operation === '-') {
+                    this.minus();
+                } else if (this.operation === '*') {
+                    this.multiplication();
+                } else if (this.operation === '/') {
+                    this.division();
+                }
         }
     }
 
